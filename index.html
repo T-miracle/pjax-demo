@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>首页</title>
+        <script src="jquery-3.4.1.js"></script>
+        <script src="jquery.pjax.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <span style="color: blue">要替换的内容，注意URL地址 👆👆👆👆</span>
+            <a href="newpage.html">点我测试</a>
+        </div>
+        <iframe frameborder="no" border="0" marginwidth="0"
+                marginheight="0" width=330 height=450
+                src="//music.163.com/outchain/player?type=0&id=2388817416&auto=1&height=430"></iframe>
+        <a href="">demo源码</a>
+        <script type="text/javascript">
+            $(function () {
+                $(document).pjax('a', '#container', {
+                    fragment: '#container',
+                    timeout: 5000,
+                    cache: false
+                });
+            })
+
+        </script>
+    </body>
+</html>
